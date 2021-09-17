@@ -19,7 +19,9 @@ For this project, you will write a Packer template and a Terraform template to d
 ### Instructions
 Before we get started, we want to create a policy that ensures all indexed resources are tagged. This will help us with organization and tracking, and make it easier to log when things go wrong. We will do this by creating and applying a Tagging Policy. Create a policy that ensures all indexed resources in your subscription have tags and deny deployment if they do not.
 
-1.
+1. Write a policy definition that will denay the creation of resources that do not have tags
+2. Apply the policy to a subscription named "tagging-policy"
+3. Use * az policy assignment list * and take a screeshot of your policy
 
 ### Output
 **Your words here**
