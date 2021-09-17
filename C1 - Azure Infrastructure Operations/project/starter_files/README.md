@@ -23,6 +23,12 @@ Before we get started, we want to create a policy that ensures all indexed resou
 2. Apply the policy to a subscription named "tagging-policy"
 3. Use * az policy assignment list * and take a screeshot of your policy
 
+In order to support application deployment, we'll need to create an image that different organizations can take advantage of to deploy their own apps! To do this, we'll create a packer image that anyone can use, and we'll leverage in our own Terraform template.
+
+The first thing we're going to want to do is use Packer to create a server image, ensuring that the provided application is included in the template. You can feel free to write your own from scratch or use the *server.json* starter code from the Github repository.
+
+Be sure to complete the following:
+
 ### Output
 **Your words here**
 
