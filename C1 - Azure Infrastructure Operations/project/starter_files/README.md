@@ -30,8 +30,26 @@ The first thing we're going to want to do is use Packer to create a server image
 Be sure to complete the following:
 
 1. Use Ubuntu 18.04-LTS SKU as your base image
-2. Ensure the following is in your provisioners: *"inline": ["echo 'Hello World!' > index.html", "nohup busybox httpd -f -p 80 &" ] "inline_shebang: "/bin/sh -x ", "type": "shell"
+2. Ensure the following is in your provisioners: *"inline": ["echo 'Hello World!' > index.html", "nohup busybox httpd -f -p 80 &" ] "inline_shebang: "/bin/sh -x ", "type": "shell" *
 3. Ensure that the resource group you specify in Packer for the image is the same image specified in Terraform
+
+Our Terraform template will allow us to reliably create, update, and destroy our infrastructure. In this example, we want to use the skills we've built with variables and loops, along with our knowledge of Azure infrastructure, to deploy a web app that has been loaded into our Packer template already.
+
+Before we get started, we'll need to verify that the policy we deployed in an earlier lesson (that one that requires tags) is still available using the Azure CLI, and include a screenshot of that policy output in our repository.
+
+#### Create the infrastructure
+
+Now you're ready to create the infrastructure for the application to run on. Here are the main steps:
+1. Create a Resource Group 
+2. Create a Virtual Network and a Subgroup on the Virtual Netowrk 
+3. Create a Network Security Group. Ensure that you explicity allow access to other VMs on the subnet and deny access from the Internet
+4. Create a Network Interface 
+5. Create a Public IP
+6. Create a Load Balancer. Your Load Blanceer will need a backend address pool and address pool association for the network interface and the load balancer
+7. Create a Virtual Machine Availability Set
+8. Create Virtual Machines - make sure you use the image you deployed using Packer!
+9. Create Managed Disks for Your Virtual Machine
+10. Ensure a variables file allows for customers to configure the number of virtual machines and the deployment at a minimum  
 
 
 ### Output
