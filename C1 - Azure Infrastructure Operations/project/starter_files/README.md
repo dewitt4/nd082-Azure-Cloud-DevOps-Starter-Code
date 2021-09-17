@@ -29,6 +29,11 @@ The first thing we're going to want to do is use Packer to create a server image
 
 Be sure to complete the following:
 
+1. Use Ubuntu 18.04-LTS SKU as your base image
+2. Ensure the following is in your provisioners: *"inline": ["echo 'Hello World!' > index.html", "nohup busybox httpd -f -p 80 &" ] "inline_shebang: "/bin/sh -x ", "type": "shell"
+3. Ensure that the resource group you specify in Packer for the image is the same image specified in Terraform
+
+
 ### Output
 **Your words here**
 
