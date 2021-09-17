@@ -17,7 +17,9 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-**Your words here**
+Before we get started, we want to create a policy that ensures all indexed resources are tagged. This will help us with organization and tracking, and make it easier to log when things go wrong. We will do this by creating and applying a Tagging Policy. Create a policy that ensures all indexed resources in your subscription have tags and deny deployment if they do not.
+
+1.
 
 ### Output
 **Your words here**
