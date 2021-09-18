@@ -12,7 +12,7 @@
 		"os_type": "Linux",
 		"image_publisher": "Canonical",
 		"image_offer": "UbuntuServer",
-		
+		"image_sku": "18-04-LTS",
 		
 		**YOUR CODE HERE**
 	}],
