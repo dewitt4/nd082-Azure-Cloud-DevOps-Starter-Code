@@ -6,6 +6,8 @@
 	},
 	"builders": [{
 		"type": "azure-arm",
+		"client_id": "{{user, 'client-id'}}",
+		
 		
 		**YOUR CODE HERE**
 	}],
