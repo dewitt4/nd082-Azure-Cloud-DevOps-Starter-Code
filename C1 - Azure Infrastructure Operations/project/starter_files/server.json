@@ -13,6 +13,8 @@
 		"image_publisher": "Canonical",
 		"image_offer": "UbuntuServer",
 		"image_sku": "18-04-LTS",
+		"managed_image_resource_group_name": "web-server"
+		"managed_image_name": "UbuntuImage",
 		
 		**YOUR CODE HERE**
 	}],
