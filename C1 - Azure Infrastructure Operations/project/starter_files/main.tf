@@ -92,6 +92,7 @@ resource "azurerm_availability_set" "example" {
 data "azurerm_image" "customimage" {
    name                = var.managed_image_name
    resource_group_name = var.managed_image_resource_group_name
+  count = var.vm_count
 }
 
 # Create Managed Disks for the Virtual Machines 
