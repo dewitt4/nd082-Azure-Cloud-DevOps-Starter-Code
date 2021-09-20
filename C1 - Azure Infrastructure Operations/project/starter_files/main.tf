@@ -60,7 +60,7 @@ resource "azurerm_public_ip" "example" {
   allocation_method   = "Static"
 
   tags = {
-    environment = "Production"
+    environment = var.stage
   }
 }
 
@@ -83,7 +83,7 @@ resource "azurerm_availability_set" "example" {
   resource_group_name = azurerm_resource_group.example.name
 
   tags = {
-    environment = "Production"
+    environment = var.stage
   }
 }
 
@@ -105,7 +105,7 @@ resource "azurerm_managed_disk" "example" {
   disk_size_gb         = "1"
 
   tags = {
-    environment = "staging"
+    environment = var.stage
   }
 }
 
