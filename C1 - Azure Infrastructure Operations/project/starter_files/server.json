@@ -15,7 +15,7 @@
 		"image_sku": "18-04-LTS",
 		"managed_image_resource_group_name": "web-server",
 		"managed_image_name": "UbuntuImage",
-		"location": "West US 2"
+		"location": "West US 2",
 		"vm_size": "Standard_D2s_v3"
 	}],
 	"provisioners": [{
