@@ -1,12 +1,28 @@
-provider "azurerm" {
-    version = "~>2.0"
-    features {}
+# Azure Provider Template taken from: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
 }
 
-resource "azurerm_policy_assignment" "auditvms" {
-    name = "audit-vm-manageddisks"
-    scope = var.cust_scope
-    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/06a78e20-9358-41c9-923c-fb736d382a4d"
-    description = "Shows all virtual machines not using managed disks"
-    display_name = "Audit VMs without managed disks Assignment"
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+}
+
+# Create a resource group
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
+
+# Create a virtual network within the resource group
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  address_space       = ["10.0.0.0/16"]
 }
