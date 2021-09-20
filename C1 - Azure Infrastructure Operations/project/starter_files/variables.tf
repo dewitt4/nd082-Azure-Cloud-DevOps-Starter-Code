@@ -12,3 +12,6 @@ variable "managed_image_resource_group_name" {
 variable "vm_count" {
    description = "The number of custom image VMs to create"
 }
+variable "stage" {
+   description = "Which stage to deploe in - ex: Production / Testing / Staging / Development etc"
+}
