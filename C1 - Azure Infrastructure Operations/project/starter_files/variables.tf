@@ -9,3 +9,6 @@ variable "managed_image_name" {
 variable "managed_image_resource_group_name" {
    description = "Name of the managed image resource group"
 }
+variable "vm_count" {
+   description = "The number of custom image VMs to create"
+}
