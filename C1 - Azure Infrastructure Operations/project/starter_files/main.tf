@@ -16,7 +16,7 @@ provider "azurerm" {
 # Create a resource group
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
-  location = "West Europe"
+  location = "West US 2"
 }
 
 # Create a virtual network and a subnet within the resource group
@@ -67,7 +67,7 @@ resource "azurerm_public_ip" "example" {
 # Create a Load Balancer 
 resource "azurerm_lb" "example" {
   name                = "TestLoadBalancer"
-  location            = "West US"
+  location            = "West US 2"
   resource_group_name = azurerm_resource_group.example.name
 
   frontend_ip_configuration {
