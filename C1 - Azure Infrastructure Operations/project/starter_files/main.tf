@@ -19,10 +19,26 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
 
-# Create a virtual network within the resource group
+# Create a virtual network and a subnet within the resource group
 resource "azurerm_virtual_network" "example" {
   name                = "example-network"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   address_space       = ["10.0.0.0/16"]
 }
+
+# Create a Network Security Group 
+
+# Create a Network Interface 
+
+# Create a Public IP
+
+# Create a Load Balancer 
+
+# Create a Virtual Machine Availability Set
+
+# Create Virtual Machines 
+
+# Create Managed Disks for the Virtual Machines 
+
+# Ensure a Variables File Allows Customers to Customize the Number of Virtual Machines and the Deployment at a Minimum 
