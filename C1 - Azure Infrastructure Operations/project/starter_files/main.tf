@@ -95,5 +95,17 @@ data "azurerm_image" "customimage" {
 }
 
 # Create Managed Disks for the Virtual Machines 
+resource "azurerm_managed_disk" "example" {
+  name                 = "acctestmd"
+  location             = "West US 2"
+  resource_group_name  = azurerm_resource_group.example.name
+  storage_account_type = "Standard_LRS"
+  create_option        = "Empty"
+  disk_size_gb         = "1"
+
+  tags = {
+    environment = "staging"
+  }
+}
 
 # Ensure a Variables File Allows Customers to Customize the Number of Virtual Machines and the Deployment at a Minimum 
