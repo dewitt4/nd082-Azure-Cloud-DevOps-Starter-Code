@@ -51,6 +51,10 @@ Now you're ready to create the infrastructure for the application to run on. Her
 9. Create Managed Disks for Your Virtual Machine
 10. Ensure a variables file allows for customers to configure the number of virtual machines and the deployment at a minimum  
 
+#### Update Variable Files 
+
+1. Create a 'variables.pkrvars.hcl' file to hold secrets and other vaiable directly in Azure so as to not have any secrets in the repo, for security purposes
+2. Create and edit 'vars.tf' file to allow users to configure a number of items including the number of virtual machines and the deployment
 
 ### Output
 **Your words here**
